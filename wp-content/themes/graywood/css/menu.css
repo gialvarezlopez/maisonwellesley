@@ -1,0 +1,166 @@
+/*==================================================*/
+/* General Setting */
+/*==================================================*/
+
+#holderTopBar{
+    position: absolute;
+    width: 100%;
+    top: 24px;
+    z-index: 1;
+}
+#holderTopBar .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#holderTopBar .nav ul li{
+    display: inline-block;
+    padding: .625rem;
+}
+
+#holderTopBar .nav ul li:last-of-type{
+    /*padding-right: 0rem;*/
+}
+#holderTopBar .nav a{
+    color: #fff;
+    text-decoration: none;
+    /*transition: 0.3s ease;*/
+    
+    
+}
+#holderTopBar .nav a.active,
+#holderTopBar .nav a:hover{
+    border-bottom: solid 2px #fff;
+}
+
+/*==================================================*/
+/* Menu  Desktop */
+/*==================================================*/
+#main_menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.875rem;
+    padding-top: 1.875rem;
+}
+
+header ul{
+    margin: 0rem;
+    padding: 0rem;
+}
+header ul li{
+    display: inline-block;
+}
+#main_menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+    /*text-transform: uppercase;*/
+}
+
+#top_bar{
+    padding: .875rem 0rem;
+    text-align: right;
+}
+#top_bar a{
+    font-size: 12px;
+}
+
+
+#main_menu ul li a.active{
+    border-bottom: solid 2px #D2CDBE;
+}
+
+#main_menu ul li{
+    padding: 0rem .625rem
+}
+
+#main_menu ul li:last-child{
+    /*padding-right: 0rem;*/
+}
+
+
+#main_menu ul li:last-child a{
+    padding: .625rem;
+    /*background: var(--third-color);*/
+    color: #fff;
+}
+
+
+.fixed {
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
+    padding:0.25rem 0;
+    animation:slide-down 0.7s;
+    background: #DED689; left: 0px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+    /*opacity: 0.5;*/
+}
+
+
+
+/*==================================================*/
+/* mobile menu */
+/*==================================================*/
+header .holder-icon-main-menu{
+    /*background: #fff;*/
+    height: 32px;
+    width: 34px;
+    text-align: center;
+    background: #fff;
+    border: solid 1px #000;
+}
+header .holder-icon-main-menu img{
+    width: 32px;
+    cursor: pointer;
+    display: none;
+}
+.holder-icon-main-menu{
+    text-align: right;
+}
+#main_menu .mobile-menu ul{
+    float: right;
+    position: absolute;
+    right: .625rem;
+    z-index: 1000;
+    background: rgba(0,0,0,0.5);
+    padding: .625rem;
+}
+#main_menu .mobile-menu ul li{
+    display: block !important;
+    text-align: right;
+}
+#main_menu .mobile-menu ul li{
+    padding: .3125rem; 
+    margin-bottom: 0.5rem;
+}
+#main_menu .mobile-menu ul li.btn-open-register{
+    margin-top: 1.25rem;
+}
+
+#main_menu .mobile-menu ul li a{
+    color: #fff;
+}
+@media (max-width: 768px) {
+    #holder_items_menu{
+       /* display: none;*/
+    }
+
+    .holderTopBar .fixed{
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    /*
+    #btn_top_register{
+        display: none;
+        
+    }
+    */
+}

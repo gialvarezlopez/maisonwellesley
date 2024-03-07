@@ -1,0 +1,607 @@
+/*=======================================*/
+/*Popup*/
+/*=======================================*/
+.modal-overlay{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: none;
+}
+
+#holderPopupBooking{
+    position: fixed;
+    z-index: 10001;
+    max-width: 773px;
+    /*height: 85%;*/
+    height: 90vh;
+    max-height: 100%;
+    /*min-height: 5.375rem;*/
+    display: none;
+    /*background: #141414;*/
+    background: #fff;
+    color:#724A31;
+    margin: 0 auto;
+    padding: 2.5rem;
+    transform: translate(0,0);
+    /*width: auto; */
+    left: 0; 
+    right: 0;
+    /*height: auto; */
+    top: 5%; 
+    bottom: 0;
+    border: solid 1px #fff;
+   
+}
+
+.holderTitleModal{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    /*padding-top: 40px;*/
+}
+
+.contentPopup{
+    max-width: 1015px;
+    margin: 0 auto;
+}
+
+.content_body{
+    position: relative;
+    height: calc(100vh - 200px);
+    display: block;
+    /*background: green;*/
+    overflow-y: auto;
+    padding-top: 1.25rem
+    /*
+    max-height: calc(100vh - 220px);
+    overflow-y: auto;
+    background: red;
+    */
+}
+.gform_wrapper.gravity-theme .gfield_label{
+    font-family: 'akkurat-lightregular';
+    font-weight: 300 !important;
+}
+.holderTitleModal,
+.holder_form_booking{
+    /*max-width: 1115px;*/
+    margin: 0 auto;
+    font-family: 'akkurat-lightregular';
+    
+}
+
+
+#holderPopupBooking .title{
+    font-size: 30px;
+    
+    font-family: 'akkurat-lightregular';
+    letter-spacing: 2px;
+}
+#holderPopupBooking .closePopup{
+
+    text-decoration: none;
+    color: #404042;
+    font-weight: 600;
+}
+
+#holderPopupBooking .closePopup img{
+    padding-right: .6875rem;
+}
+
+
+
+/*
+=====================================================================
+Form Style 
+=======================================================================
+*/
+
+.holder_form_booking .rowForm{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 1rem;
+    align-items: baseline;
+}
+
+
+/*
+.holder_form_booking .rowForm.twoCol .column{
+    flex: 1;
+}
+.holder_form_booking .rowForm.oneCol .column{
+    flex: 2;
+}
+
+@media only screen and (max-width: 768px) {
+    .holder_form_booking .rowForm{
+        flex-direction: column;
+    }
+
+    .holder_form_booking .rowForm.twoCol .column,
+    .holder_form_booking .rowForm.oneCol .column{
+        flex: 1;
+        width: 98%;
+    }
+}
+*/
+.holder_form_booking  input[type=text],
+.holder_form_booking  input[type=email],
+.holder_form_booking  input[type=tel],
+.holder_form_booking  input[type=number],
+.holder_form_booking  textarea, 
+.holder_form_booking   select{
+    width: 100%;
+    padding: 15px 13px 15px 13px;
+    display: block;
+    border: solid 1px #724A31;
+    font-family: 'akkurat-lightregular';
+    font-size: 16px;
+    color: #724A31;
+    background: #fff;
+}
+
+.holder_form_booking   select option:not(:checked) {
+    background-color: #fff;
+    color:#141414;
+  }
+
+.holder_form_booking .gchoice {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.gform_button{
+    padding: 12px 35px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: solid 1px #BF6B38;
+    color: #fff;
+    background: #BF6B38;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.gform_wrapper.gravity-theme .gform_footer, .gform_wrapper.gravity-theme .gform_page_footer {
+
+    text-align: center;
+}
+
+.gform_confirmation_wrapper {
+    margin-top: 6.25rem;
+}
+
+
+.holder_form_booking  textarea{
+    margin-top: 40px;
+}
+.holder_form_booking  select{
+    /*background: #CECECE;*/
+    /*text-align: center;*/
+}
+
+.holder_form_booking input:focus, .holder_form_booking textarea:focus, .holder_form_booking select:focus{
+    outline: none;
+}
+
+.holder_form_booking .wrapper_input{
+    display: inline-block;
+    margin-top: .625rem;
+}
+.holder_form_booking .label_title{
+    padding-bottom: .625rem;
+    display: block;
+}
+
+.holder_form_booking .wrapper_input .wrapper_input {
+    position: relative;
+    margin: 20px 0;
+}
+
+.holder_form_booking .wrapper_input input {
+    display: none;
+}
+
+.holder_form_booking   .wrapper_input input + label:after {
+    transform: scale(1);
+    opacity: 1;
+    background: #FFFFFF;
+}
+
+.holder_form_booking   .wrapper_input input:checked + label:after {
+    transform: scale(1);
+    opacity: 1;
+    background: #404042;
+}
+
+
+.holder_form_booking   .wrapper_input label {
+    
+    font-weight: 300;
+    margin: 0;
+    margin-right: .9375rem;
+    padding-left: 1.875rem;
+    display: inline-block;
+    position: relative;
+    
+}
+
+.holder_form_booking   .wrapper_input ul label:before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    
+    margin-top: -10px;
+    border: solid 1px #fff;
+}
+
+.holder_form_booking   .wrapper_input label:after {
+    background: #404042;
+    border: solid 1px #fff;
+    left: 0;
+    top: 50%;
+    transition: 0.3s;
+    transform: scale(3.4);
+    opacity: 0;
+    margin-top: -7px;
+    width: 14px;
+    height: 14px;
+    content: "";
+    position: absolute;
+    left: 3px;
+
+    
+}
+
+.holder_form_booking #holder_name_realtor{
+    margin-top: .625rem;
+    display: none;
+}
+
+.holder_form_booking .holder_submit{
+    text-align: center;
+    padding-top: 1.25rem;
+}
+
+
+/*wpform*/
+.holder_form_booking   .wrapper_input .wpforms-field-label{
+    padding-left: 0px;
+}
+
+.holder_form_booking   .wrapper_input{}
+
+.wpforms-submit-container{
+    text-align: center;
+}
+
+.holder_form_booking div.wpforms-container-full .wpforms-form input[type=submit], 
+.holder_form_booking div.wpforms-container-full .wpforms-form button[type=submit], 
+.holder_form_booking div.wpforms-container-full .wpforms-form .wpforms-page-button{
+    border: solid 1px #263942 !important;
+    color: #404042 !important;
+}   
+
+.holder_form_booking div.wpforms-container-full .wpforms-form .wpforms-field-label{
+    font-weight: 100 !important;
+}
+
+/*.wpforms-field*/
+
+.holder_form_booking .wpforms-field input[type=text],
+.holder_form_booking .wpforms-field input[type=email],
+.holder_form_booking .wpforms-field input[type=number],
+.holder_form_booking .wpforms-field textarea, 
+.holder_form_booking .wpforms-field select{
+    /*font-family: 'montserratregular';*/
+}
+@media only screen and (max-width: 768px) {
+
+
+    .holder_form_booking div.wpforms-container-full .wpforms-form .wpforms-one-half, 
+    .holder_form_booking div.wpforms-container-full .wpforms-form .wpforms-three-sixths, 
+    .holder_form_bookingdiv.wpforms-container-full .wpforms-form .wpforms-two-fourths
+    {
+        width: 100%;
+        margin-left: 0px;
+
+    }
+
+    #holderPopupBooking .title {
+        font-size: 18px;
+        line-height: 1;
+    }
+}
+
+.gform_wrapper .gfield_required {color: #cfcfcf !important;}
+
+/*
+#holderPopupBooking .content_body .holderCheckboxs{
+    margin-top: 30px;
+}
+#holderPopupBooking .content_body input[type="checkbox"]{
+    width: 55px;
+    height: 55px;
+    border-radius: 0px;
+    vertical-align: middle;
+}
+
+#holderPopupBooking .content_body .holderCheckboxs label{
+    display: flex;
+    align-items: center;
+}
+#holderPopupBooking .content_body .holderCheckboxs label span{
+    display: inline-block;
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+
+.holder_form_booking .fields{
+    max-width: 876px;
+    margin: 0 auto;
+}
+
+
+.holder_form_booking .infoForm{
+    padding-top: 35px;
+}
+.holder_form_booking .holderFields{
+    margin-top: 35px;
+}
+
+
+.holder_form_booking .rowForm input[type=text],
+.holder_form_booking .rowForm input[type=email],
+.holder_form_booking .rowForm input[type=number],
+.holder_form_booking .rowForm textarea, 
+.holder_form_booking .rowForm select{
+    width: 100%;
+    padding: 10px 10px 10px 0px;
+    display: block;
+    border: none;
+    font-family: 'gothambook';
+    font-size: 16px;
+    color: #404040;
+}
+.holder_form_booking .rowForm textarea{
+    margin-top: 40px;
+}
+.holder_form_booking .rowForm select{
+    background: #CECECE;
+    text-align: center;
+}
+
+.holder_form_booking .rowForm select option{
+    background: #DED689;
+    border: solid 2px #404040;
+    padding: 8px;
+}
+.holder_form_booking .asField{
+    padding: 7px 7px 7px 0px;
+    color: #404040;
+    display: inline-block;
+
+}
+
+.holder_form_booking ::placeholder { 
+    color: #404040;
+    opacity: 1; 
+  }
+  
+.holder_form_booking :-ms-input-placeholder { 
+    color: #404040;
+  }
+  
+.holder_form_booking ::-ms-input-placeholder { 
+    color: #404040;
+}
+
+
+.holder_form_booking input:focus, .holder_form_booking textarea:focus, .holder_form_booking select:focus{
+    outline: none;
+}
+
+.holder_form_booking .rowForm{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    margin-bottom: 5px;
+    gap: 10px;
+    
+    align-items: center;
+}
+
+.holder_form_booking .rowForm.setBorder{
+    border-bottom: solid 1px #707070;
+}
+
+
+.holder_form_booking .rowForm .column {
+    
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.holder_form_booking .rowForm.holderSelect{
+    margin-bottom: 20px;
+}
+
+.holder_form_booking .rowForm .column .radio{
+    margin-right: 15px;
+    
+}
+
+.holder_form_booking  #sendMessage{
+    width: 100%;
+    background: #DED689;
+    padding: 15px;
+    border: transparent;
+    cursor: pointer;
+}
+
+
+.holder_form_booking .select {
+    cursor:pointer;
+    display:inline-block;
+    position:relative;
+    
+    color:black;
+    border:1px solid #ccc;
+    width: 100%;
+}
+.holder_form_booking .styledSelect {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color:#CECECE;
+    padding:0 10px;
+    padding-top: 8px;
+    text-align: center;
+    
+}
+.holder_form_booking .styledSelect:after {
+    content:"";
+    width:0;
+    height:0;
+    border:5px solid transparent;
+    border-color:black transparent transparent transparent;
+    position:absolute;
+    top:15px;
+    right:6px;
+}
+.holder_form_booking .styledSelect:active, .styledSelect.active {
+    background-color:#eee;
+}
+
+
+.holder_form_booking .options {
+    display:none;
+    position:absolute;
+    top:100%;
+    right:-1px;
+    left:-1px;
+    z-index:999;
+    margin:0 0;
+    padding:0 0;
+    list-style:none;
+    border:1px solid #ccc;
+    background-color:white;
+    -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+    max-height: 173px;
+    overflow-y: auto;
+    
+    
+}
+.holder_form_booking .options li {
+
+    margin:0 0;
+    padding:10px 10px;
+    border-bottom: solid 1px #707070;
+    text-align: center;
+    background: #DED689;
+   
+}
+.holder_form_booking .options li:hover {
+    background-color:#373536;
+    color:white;
+    
+}
+
+.holder_form_booking .is_realtor span:first-child{
+    margin-left: -5px;
+}
+
+.holder_form_booking .wpcf7-list-item{
+    margin-left: 0px;
+}
+
+.holder_form_booking .wpcf7-list-item span{
+    margin-right: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .holder_form_booking .rowForm {
+        flex-direction: column;
+        align-items:unset;
+    }
+
+    .holder_form_booking .rowForm.setBorder:not(.inputRadio) {
+        border-bottom: none;
+    }
+
+    .holder_form_booking .rowForm input[type=text],
+    .holder_form_booking .rowForm input[type=email],
+    .holder_form_booking .rowForm input[type=tel],
+    .holder_form_booking .rowForm textarea{
+        border-bottom: solid 1px #707070;
+    }
+    .holder_form_booking{
+        padding-right: 15px;
+    }
+
+    .holder_form_booking .rowForm.holderSelect {
+        margin-bottom: 10px;
+    }
+}
+*/
+
+/* After submit*/
+/*
+.bgSentMailOk{
+    background: #DED689 !important;
+    color: #404040;
+}
+
+.bgSentMailOk .title  {
+    display: none;
+}
+
+.bgSentMailOk #holderLogoSentForm{
+    display: block;
+}
+
+#holderPopupBooking:not(.bgSentMailOk) #holderLogoSentForm{
+   display: none;
+}
+
+.bgSentMailOk #holderLogoSentForm{
+    display: block;
+    text-align: center;
+    padding: 100px 25px 25px 25px;
+}
+
+.bgSentMailOk .wpcf7 form .wpcf7-response-output{
+    border: none !important;
+    font-size: 31px;
+    line-height: 1;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 30px;
+}
+*/
+
+
+
